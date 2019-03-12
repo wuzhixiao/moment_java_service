@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nujnay.moment.server.dao.UserRegisterDao">
+    <resultMap id="UpdateVersionDO" type="com.nujnay.moment.server.bean.UpdateVersionDO">
+        <result column="new_version" property="newVersion"/>
+        <result column="new_version_name" property="newVersionName"/>
+        <result column="apk_url" property="apkUrl"/>
+        <result column="update_log" property="updateLog"/>
+        <result column="force_update" property="forceUpdate"/>
+        <result column="phone_sys_type" property="phoneSysType"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, new_version, new_version_name, apk_url, update_log, modify_time,force_update,phone_sys_type
+    </sql>
+
+    <select id="getapkVersion" resultMap="UpdateVersionDO">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        user_apk_version
+        where
+        id = (select max(id) from user_apk_version)
+    </select>
+
+</mapper>

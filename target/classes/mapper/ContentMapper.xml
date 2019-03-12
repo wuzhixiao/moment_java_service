@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nujnay.moment.server.dao.ContentDao">
+    <resultMap id="TodayBean" type="com.nujnay.moment.server.bean.TodayBean">
+        <result column="id" property="id"/>
+        <result column="today_date" property="today_date"/>
+        <result column="mid" property="mid"/>
+        <result column="reason" property="reason"/>
+    </resultMap>
+    <!--SELECT * from tb  id = (SELECT max(id) FROM tb);-->
+    <sql id="ContentMapper">
+        id
+        , today_date
+        , mid
+        , reason
+    </sql>
+
+    <select id="getWeiboData" resultMap="TodayBean">
+        select
+        <include refid="ContentMapper"/>
+        from
+        content where today_date = (SELECT max(today_date) FROM content);
+    </select>
+</mapper>

@@ -1,0 +1,8 @@
+bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+没有建成表
+
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM maindb.virus_package;
+
+服务器更改列属性
+alter table residual_pending_package modify residual_pending_num bigint(20)

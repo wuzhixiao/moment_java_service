@@ -1,0 +1,4 @@
+residual_package
+insert into residual_package(package_name,path_encrypt,path_real,app_name,residual_package_redis) values ('bb','bb','bb','bb','bb:residual')
+
+CREATE DATABASE maindb;

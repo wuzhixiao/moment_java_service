@@ -1,0 +1,7 @@
+com\nujnay\moment\server\base\BasicResult.class
+com\nujnay\moment\server\bean\UpdateVersionDO.class
+com\nujnay\moment\server\dao\UserApkVersionMapper.class
+com\nujnay\moment\server\wechat\WeChatAuto.class
+com\nujnay\moment\server\MainApplication.class
+com\nujnay\moment\server\bean\UserMessBean.class
+com\nujnay\moment\server\controller\test.class

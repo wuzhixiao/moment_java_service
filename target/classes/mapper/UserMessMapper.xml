@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nujnay.moment.server.dao.UserMessDao">
+
+    <resultMap id="UserMessBean" type="com.nujnay.moment.server.bean.UserMessBean">
+        <result column="phonenumber" property="phonenumber"/>
+        <result column="imei" property="imei"/>
+        <result column="isVip" property="isVip"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        phonenumber, imei,isVip
+    </sql>
+
+    <select id="getUserMess" resultMap="UserMessBean">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        user_mess
+        where
+        phonenumber = #{phoneNum}
+
+    </select>
+
+
+    <insert id="insertOneUsermess" parameterType="com.nujnay.moment.server.bean.UserMessBean">
+        insert into user_mess (phonenumber,imei,isVip) values(#{phonenumber},#{imei},#{isVip})
+    </insert>
+
+</mapper>

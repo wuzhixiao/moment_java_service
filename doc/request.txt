@@ -1,0 +1,39 @@
+/virus
+{
+    "score" : 5,
+    "appType" : 5,
+    "virusRedisKey" : "www",
+    "packageName" : "www",
+    "summary" : "www",
+    "virusName" : "www",
+    "virusNameInCloud" : "www",
+    "category" : "www",
+    "certList" : "www"
+}
+
+
+/residual bb
+http://localhost:8080/residual
+
+http://localhost:8080/a
+v
+
+
+http://47.74.230.34:8080/residual
+packageName
+O4Wblgf8dZYknpck0oPE590JHN4KkA7gh0zGZ66HIcgoaE+VlakDDELtRHF1Y49uR+2W+QqeSa8S
+IG42nlqKA98DY8+Hhh5w14J8UBvdpw/fyfl350O+S81MkizOfv31UOvSeLrUULmPjz3P/HxMm24w
+pd4uf8+z6D1JSbYtkQw=
+
+curl -d "packageName=dJfuI/yPm6tyTIVW1GY2XQcTcHg+Ozc5MThdKxqY9sILe6vSS8/7Dxx2ZEZ/24rVGMi/qX/tih0oMrjEogtApBizpIgjdXaadXSA3nbQIchVQ9rgr/FkZTAAOjnTMRjo96nrT9zhT8aZhpmYM5IcEuAuUV1X+bh1o+u6Rq/yjDw=" "http://localhost:8080/residual"
+
+curl http://localhost/home/index.html
+
+curl http://localhost/
+
+curl -d "packageName=dJfuI/yPm6tyTIVW1GY2XQcTcHg+Ozc5MThdKxqY9sILe6vSS8/7Dxx2ZEZ/24rVGMi/qX/tih0oMrjEogtApBizpIgjdXaadXSA3nbQIchVQ9rgr/FkZTAAOjnTMRjo96nrT9zhT8aZhpmYM5IcEuAuUV1X+bh1o+u6Rq/yjDw=" "http://localhost:8080/residual"
+curl -d "packageName=bb" "http://127.0.0.1:8080/residual"
+
+
+
+www.defendertech.xyz

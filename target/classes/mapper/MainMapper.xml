@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nujnay.moment.server.dao.MainDao">
+    <resultMap id="MainBean" type="com.nujnay.moment.server.bean.MainBean">
+        <result column="date_due" property="date_due"/>
+        <result column="weixin_id" property="weixin_id"/>
+        <result column="weibo_name" property="weibo_name"/>
+        <result column="weibo_pwd" property="weibo_pwd"/>
+        <result column="weibo_cookie" property="weibo_cookie"/>
+        <result column="weibo_main_id" property="weibo_main_id"/>
+    </resultMap>
+
+    <parameterMap id="MainBean" type="com.nujnay.moment.server.bean.MainBean"/>
+    <insert id="insertMainData" parameterType="MainBean" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        main(date_due,weixin_id,weibo_name,weibo_pwd,weibo_cookie,weibo_main_id)
+        values
+        (#{date_due},#{weixin_id},#{weibo_name},#{weibo_pwd},#{weibo_cookie},#{weibo_main_id})
+    </insert>
+</mapper>

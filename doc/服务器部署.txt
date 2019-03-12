@@ -1,0 +1,10 @@
+修改mysql登录密码和redis登录密码
+mvn clean package  -Dmaven.test.skip=true
+/usr/local/main
+D:\Residual\main\target
+java -jar /usr/local/main/main
+nohup java -jar /usr/local/main/main &
+tail -f /usr/local/main/nohup.out
+
+ps -ef|grep java //查pid
+kill -9

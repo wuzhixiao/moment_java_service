@@ -1,0 +1,4 @@
+Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+[Request processing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException:
+EL1008E: Property or field 'timestamp' cannot be found on object of type 'java.util.HashMap' - maybe not public?]
+with root cause
